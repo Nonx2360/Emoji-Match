@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+}
+
+#setup,
+#playerNames,
+#game {
+    margin-top: 20px;
+}
+
+input,
+select,
+button {
+    margin: 10px;
+}
+
+#gameBoard {
+    display: grid;
+    grid-template-columns: repeat(10, 60px);
+    /* 10 columns */
+    grid-template-rows: repeat(10, 60px);
+    /* 10 rows */
+    gap: 5px;
+    /* Adjust spacing between cards */
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.card {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    /* Adjust font size to fit emoji */
+    background-color: #f0f0f0;
+    cursor: pointer;
+    border: 2px solid #ddd;
+}
+
+.card.flipped {
+    background-color: #fff;
+}
+
+.card.matched {
+    background-color: #4CAF50;
+    color: white;
+    cursor: default;
+}
+
+#turnDisplay {
+    font-size: 24px;
+    margin: 10px;
+}
